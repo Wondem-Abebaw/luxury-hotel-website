@@ -10,19 +10,7 @@ export type Room = {
   amenities: string[]
 }
 
-// export async function getRooms(): Promise<Room[]> {
-//   return client.fetch(
-//     `*[_type == "room"] | order(_createdAt asc) {
-//       "id": _id,
-//       name,
-//       "slug": slug.current,
-//       price,
-//       image,
-//       description,
-//       amenities
-//     }`
-//   )
-// }
+
 
 
 export async function getRooms() {
@@ -39,7 +27,8 @@ export async function getRooms() {
     {},
     {
       next: { 
-        revalidate: 60  // re-fetch from Sanity every 60 seconds at minimum
+        tags: ['rooms'],      // for instant webhook revalidation
+        // revalidate: 3600      // fallback: recheck every 1 hour if webhook fails
       }
     }
   )
