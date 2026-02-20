@@ -48,7 +48,7 @@ export async function getRooms() {
     {
       next: { 
         tags: ['room'],      // for instant webhook revalidation
-        // revalidate: 3600      // fallback: recheck every 1 hour if webhook fails
+        // revalidate: 36000      // fallback: recheck every 10 hour if webhook fails
       }
     }
   )
@@ -88,7 +88,7 @@ export async function getMenuGrouped(): Promise<MenuCategory[]> {
     {},
     {
       next: {
-        revalidate: 60,
+        revalidate: 3600,
       }
     }
   )
