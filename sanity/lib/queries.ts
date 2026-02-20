@@ -27,7 +27,7 @@ export async function getRooms() {
     {},
     {
       next: { 
-        tags: ['rooms'],      // for instant webhook revalidation
+        tags: ['room'],      // for instant webhook revalidation
         // revalidate: 3600      // fallback: recheck every 1 hour if webhook fails
       }
     }
