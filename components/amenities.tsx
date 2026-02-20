@@ -41,6 +41,7 @@ const AMENITIES = [
     description: "24/7 dedicated concierge for all your needs",
     icon: ConciergeBell,
   },
+  
 ];
 
 export function Amenities() {

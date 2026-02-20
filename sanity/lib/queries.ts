@@ -10,7 +10,22 @@ export type Room = {
   amenities: string[]
 }
 
-export async function getRooms(): Promise<Room[]> {
+// export async function getRooms(): Promise<Room[]> {
+//   return client.fetch(
+//     `*[_type == "room"] | order(_createdAt asc) {
+//       "id": _id,
+//       name,
+//       "slug": slug.current,
+//       price,
+//       image,
+//       description,
+//       amenities
+//     }`
+//   )
+// }
+
+
+export async function getRooms() {
   return client.fetch(
     `*[_type == "room"] | order(_createdAt asc) {
       "id": _id,
@@ -20,7 +35,13 @@ export async function getRooms(): Promise<Room[]> {
       image,
       description,
       amenities
-    }`
+    }`,
+    {},
+    {
+      next: { 
+        revalidate: 60  // re-fetch from Sanity every 60 seconds at minimum
+      }
+    }
   )
 }
 
