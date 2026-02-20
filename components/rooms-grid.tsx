@@ -21,7 +21,7 @@ export async function RoomsGrid() {
 
         {/* Rooms Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {rooms.map((room) => (
+          {rooms.map((room:any) => (
             <div
               key={room.id}
               className="group rounded-2xl overflow-hidden shadow-lg"
