@@ -1,0 +1,32 @@
+import type { Metadata } from 'next'
+import { Navigation } from '@/components/navigation'
+import { Hero } from '@/components/hero'
+import { RoomsGrid } from '@/components/rooms-grid'
+import { Amenities } from '@/components/amenities'
+import { Gallery } from '@/components/gallery'
+import { BookingForm } from '@/components/booking-form'
+import { Footer } from '@/components/footer'
+import { JsonLd } from '@/components/json-ld'
+
+export const metadata: Metadata = {
+  title: 'Luxe Haven - Boutique Luxury Hotel | Premium Accommodations',
+  description: 'Experience refined elegance at Luxe Haven. Book your luxury stay with premium rooms, spa, fine dining, and world-class service.',
+  keywords: ['luxury hotel', 'boutique accommodation', 'luxury rooms', 'hotel booking'],
+}
+
+export default function Home() {
+  return (
+    <>
+      <JsonLd />
+      <main className="bg-background text-foreground">
+        <Navigation />
+        <Hero />
+        <RoomsGrid />
+        <Amenities />
+        <Gallery />
+        <BookingForm />
+        <Footer />
+      </main>
+    </>
+  )
+}

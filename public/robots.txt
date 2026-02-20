@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /.next
+
+Sitemap: https://luxehaven.com/sitemap.xml
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay to be respectful
+User-agent: *
+Crawl-delay: 0.5
