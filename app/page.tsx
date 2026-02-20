@@ -7,6 +7,7 @@ import { Gallery } from '@/components/gallery'
 import { BookingForm } from '@/components/booking-form'
 import { Footer } from '@/components/footer'
 import { JsonLd } from '@/components/json-ld'
+import { Menu } from '@/components/menu'
 
 export const metadata: Metadata = {
   title: 'Luxe Haven - Boutique Luxury Hotel | Premium Accommodations',
@@ -23,6 +24,7 @@ export default function Home() {
         <Hero />
         <RoomsGrid />
         <Amenities />
+        <Menu /> 
         <Gallery />
         <BookingForm />
         <Footer />

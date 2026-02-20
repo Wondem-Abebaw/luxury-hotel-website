@@ -9,7 +9,27 @@ export type Room = {
   description: string
   amenities: string[]
 }
-
+export type MenuItem = {
+  id: string
+  name: string
+  price: number
+  description: string
+  image: any
+  available: boolean
+  category: {
+    id: string
+    name: string
+    slug: string
+    order: number
+  }
+}
+export type MenuCategory = {
+  id: string
+  name: string
+  slug: string
+  order: number
+  items: MenuItem[]
+}
 
 
 
@@ -46,5 +66,30 @@ export async function getRoomBySlug(slug: string): Promise<Room> {
       amenities
     }`,
     { slug }
+  )
+}
+// Fetch all categories with their items grouped
+export async function getMenuGrouped(): Promise<MenuCategory[]> {
+  return client.fetch(
+    `*[_type == "menuCategory"] | order(order asc) {
+      "id": _id,
+      name,
+      "slug": slug.current,
+      order,
+      "items": *[_type == "menuItem" && references(^._id) && available == true] | order(name asc) {
+        "id": _id,
+        name,
+        price,
+        description,
+        image,
+        available
+      }
+    }`,
+    {},
+    {
+      next: {
+        revalidate: 60,
+      }
+    }
   )
 }
