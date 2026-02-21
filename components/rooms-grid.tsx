@@ -21,17 +21,25 @@ export async function RoomsGrid() {
 
         {/* Rooms Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {rooms.map((room:any) => (
+          {rooms.map((room: any) => (
             <div
               key={room.id}
               className="group rounded-2xl overflow-hidden shadow-lg"
             >
               <div className="relative h-64">
-                <Image
+                {/* <Image
                   src={urlFor(room.image).width(600).height(400).url()}
                   alt={room.name}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                /> */}
+                <Image
+                  src={urlFor(room.image).width(800).url()} // 👈 Sanity resizes it BEFORE it hits Vercel
+                  alt={room.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw" // 👈 Tells browser to load smaller images on mobile
+                  priority={room.isFeatured} // 👈 Loads the main image instantly
                 />
               </div>
               <div className="p-6">

@@ -83,12 +83,12 @@ export function QRCard({ hotelName, menuUrl, tagline }: Props) {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Footer
         <div className="bg-gray-50 px-8 py-4 text-center border-t border-gray-100">
           <p className="text-gray-400 text-xs">
             {menuUrl}
           </p>
-        </div>
+        </div> */}
       </div>
 
     </div>
