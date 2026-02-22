@@ -2,13 +2,13 @@ export function JsonLd() {
   const hotelSchema = {
     "@context": "https://schema.org",
     "@type": "Hotel",
-    "@id": "https://luxehaven.com",
-    name: "Luxe Haven",
+    "@id": "https://costriahotel.com",
+    name: "Costria Hotel",
     description:
-      "One of the top and best hotels in Addis Ababa, offering premium accommodations, world-class amenities, and exceptional service for an unforgettable stay.",
-    url: "https://luxehaven.com",
+      "Costria Hotel is one of the top hotels in Addis Ababa, offering premium accommodations, world-class amenities, and exceptional service for an unforgettable stay.",
+    url: "https://costriahotel.com",
     telephone: "+251-11-123-4567",
-    email: "info@luxehaven.com",
+    email: "info@costriahotel.com",
     image:
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
     priceRange: "$$$$",
@@ -32,33 +32,18 @@ export function JsonLd() {
       longitude: "38.7578",
     },
     amenityFeature: [
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Spa",
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Restaurant",
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Fitness Center",
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "WiFi",
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        name: "Concierge",
-      },
+      { "@type": "LocationFeatureSpecification", name: "Spa" },
+      { "@type": "LocationFeatureSpecification", name: "Restaurant" },
+      { "@type": "LocationFeatureSpecification", name: "Fitness Center" },
+      { "@type": "LocationFeatureSpecification", name: "WiFi" },
+      { "@type": "LocationFeatureSpecification", name: "Concierge" },
     ],
     rooms: [
       {
         "@type": "Room",
         name: "Deluxe Suite",
         description: "Spacious suite with premium furnishings and city views",
-        url: "https://luxehaven.com/rooms/deluxe-suite",
+        url: "https://costriahotel.com/rooms/deluxe-suite",
         offers: {
           "@type": "PriceSpecification",
           priceCurrency: "ETB",
@@ -70,7 +55,7 @@ export function JsonLd() {
         "@type": "Room",
         name: "City View Room",
         description: "Modern accommodation with panoramic Addis Ababa views",
-        url: "https://luxehaven.com/rooms/city-view-room",
+        url: "https://costriahotel.com/rooms/city-view-room",
         offers: {
           "@type": "PriceSpecification",
           priceCurrency: "ETB",
@@ -83,7 +68,7 @@ export function JsonLd() {
         name: "Presidential Suite",
         description:
           "Ultimate luxury with private spa and exceptional amenities",
-        url: "https://luxehaven.com/rooms/presidential-suite",
+        url: "https://costriahotel.com/rooms/presidential-suite",
         offers: {
           "@type": "PriceSpecification",
           priceCurrency: "ETB",
@@ -93,30 +78,30 @@ export function JsonLd() {
       },
     ],
     sameAs: [
-      "https://www.facebook.com/luxehaven",
-      "https://www.instagram.com/luxehaven",
-      "https://www.twitter.com/luxehaven",
+      "https://www.facebook.com/costriahotel",
+      "https://www.instagram.com/costriahotel",
+      "https://www.twitter.com/costriahotel",
     ],
   };
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Luxe Haven",
-    url: "https://luxehaven.com",
-    logo: "https://luxehaven.com/logo.png",
+    name: "Costria Hotel",
+    url: "https://costriahotel.com",
+    logo: "https://costriahotel.com/logo.png",
     description:
-      "Boutique luxury hotel with premium accommodations and world-class amenities",
+      "Boutique luxury hotel in Addis Ababa with premium accommodations and world-class amenities",
     sameAs: [
-      "https://www.facebook.com/luxehaven",
-      "https://www.instagram.com/luxehaven",
-      "https://www.twitter.com/luxehaven",
+      "https://www.facebook.com/costriahotel",
+      "https://www.instagram.com/costriahotel",
+      "https://www.twitter.com/costriahotel",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
       telephone: "+251-11-123-4567",
-      email: "info@luxehaven.com",
+      email: "info@costriahotel.com",
     },
   };
 

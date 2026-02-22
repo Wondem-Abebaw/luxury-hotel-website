@@ -10,11 +10,11 @@ import { JsonLd } from "@/components/json-ld";
 import { Menu } from "@/components/menu";
 
 export const metadata: Metadata = {
-  title: "Luxe Haven - Boutique Luxury Hotel | Premium Accommodations",
+  title: "Costria hotel Hotel | Premium Accommodations",
   description:
     "Best Hotels in Addis Ababa. Book your luxury stay with premium rooms, spa, fine dining, and world-class service.",
   keywords: [
-    "luxury hotel",
+    "Costria hotel",
     "Best Hotels in Addis Ababa",
     "Best Hotel",
     "Addis Ababa",
