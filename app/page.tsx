@@ -1,19 +1,27 @@
-import type { Metadata } from 'next'
-import { Navigation } from '@/components/navigation'
-import { Hero } from '@/components/hero'
-import { RoomsGrid } from '@/components/rooms-grid'
-import { Amenities } from '@/components/amenities'
-import { Gallery } from '@/components/gallery'
-import { BookingForm } from '@/components/booking-form'
-import { Footer } from '@/components/footer'
-import { JsonLd } from '@/components/json-ld'
-import { Menu } from '@/components/menu'
+import type { Metadata } from "next";
+import { Navigation } from "@/components/navigation";
+import { Hero } from "@/components/hero";
+import { RoomsGrid } from "@/components/rooms-grid";
+import { Amenities } from "@/components/amenities";
+import { Gallery } from "@/components/gallery";
+import { BookingForm } from "@/components/booking-form";
+import { Footer } from "@/components/footer";
+import { JsonLd } from "@/components/json-ld";
+import { Menu } from "@/components/menu";
 
 export const metadata: Metadata = {
-  title: 'Luxe Haven - Boutique Luxury Hotel | Premium Accommodations',
-  description: 'Experience refined elegance at Luxe Haven. Book your luxury stay with premium rooms, spa, fine dining, and world-class service.',
-  keywords: ['luxury hotel', 'boutique accommodation', 'luxury rooms', 'hotel booking'],
-}
+  title: "Luxe Haven - Boutique Luxury Hotel | Premium Accommodations",
+  description:
+    "Best Hotels in Addis Ababa. Book your luxury stay with premium rooms, spa, fine dining, and world-class service.",
+  keywords: [
+    "luxury hotel",
+    "Best Hotels in Addis Ababa",
+    "Best Hotel",
+    "Addis Ababa",
+    "hotel booking",
+    "top hotels in addis ababa",
+  ],
+};
 
 export default function Home() {
   return (
@@ -24,11 +32,11 @@ export default function Home() {
         <Hero />
         <RoomsGrid />
         <Amenities />
-        <Menu /> 
+        <Menu />
         <Gallery />
         <BookingForm />
         <Footer />
       </main>
     </>
-  )
+  );
 }
