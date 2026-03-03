@@ -8,6 +8,7 @@ import { BookingForm } from "@/components/booking-form";
 import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
 import { Menu } from "@/components/menu";
+// import { BookingForm } from "@/components/booking/booking-form";
 
 export const metadata: Metadata = {
   title: "Costria hotel Hotel | Premium Accommodations",
