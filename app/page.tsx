@@ -11,11 +11,11 @@ import { Menu } from "@/components/menu";
 // import { BookingForm } from "@/components/booking/booking-form";
 
 export const metadata: Metadata = {
-  title: "Costria hotel Hotel | Premium Accommodations",
+  title: "Green Pearl Hotel Hotel | Premium Accommodations",
   description:
     "Best Hotels in Addis Ababa. Book your luxury stay with premium rooms, spa, fine dining, and world-class service.",
   keywords: [
-    "Costria hotel",
+    "Green Pearl Hotel",
     "Best Hotels in Addis Ababa",
     "Best Hotel",
     "Addis Ababa",

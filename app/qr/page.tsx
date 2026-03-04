@@ -4,12 +4,12 @@ import './print.css'
 import { QRCard } from '@/components/qr/qr-card'
 
 export const metadata: Metadata = {
-  title: 'Menu QR Code | Luxe Haven',
-  description: 'Printable QR code for the Luxe Haven digital menu.',
+  title: 'Menu QR Code | Green Pearl',
+  description: 'Printable QR code for the Green Pearl digital menu.',
 }
 
 
-const HOTEL_NAME = 'Luxe Haven'
+const HOTEL_NAME = 'Green Pearl'
 const HOTEL_TAGLINE = 'Boutique Luxury Hotel'
 const MENU_URL = 'https://luxury-hotel-website-five.vercel.app/menus'
 

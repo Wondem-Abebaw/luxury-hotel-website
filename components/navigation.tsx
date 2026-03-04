@@ -42,7 +42,7 @@ export function Navigation() {
             }`}>
               <Image
                 src="/logo.jpg"
-                alt="Luxe Haven logo"
+                alt="Green Pearl Hotel logo"
                 fill
                 className="object-cover"
                 priority
@@ -51,7 +51,7 @@ export function Navigation() {
             <span className={`text-xl font-serif font-bold transition-colors duration-300 ${
               isScrolled ? 'text-primary' : 'text-primary'
             }`}>
-              Luxe Haven
+            Green Pearl Hotel
             </span>
           </Link>
 
@@ -59,7 +59,7 @@ export function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className={`transition-colors duration-300 text-sm uppercase tracking-wider ${
@@ -69,20 +69,20 @@ export function Navigation() {
                   }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#booking" className={`px-6 py-2 text-sm uppercase tracking-wider rounded-sm transition-all duration-300 inline-block ${
+            <Link href="#booking" className={`px-6 py-2 text-sm uppercase tracking-wider rounded-sm transition-all duration-300 inline-block ${
               isScrolled
                 ? 'bg-primary text-primary-foreground hover:opacity-90'
                 : 'bg-white/15 text-white border border-white/50 hover:bg-white/25 backdrop-blur-sm'
             }`}>
               Book Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,18 +102,18 @@ export function Navigation() {
         {isOpen && (
           <div className="md:hidden pb-4 bg-background border-b border-border">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
-            <a href="#booking" onClick={() => setIsOpen(false)} className="block w-full mt-4 px-6 py-2 bg-primary text-primary-foreground text-sm uppercase tracking-wider rounded-sm hover:opacity-90 transition-opacity text-center">
+            <Link href="#booking" onClick={() => setIsOpen(false)} className="block w-full mt-4 px-6 py-2 bg-primary text-primary-foreground text-sm uppercase tracking-wider rounded-sm hover:opacity-90 transition-opacity text-center">
               Book Now
-            </a>
+            </Link>
           </div>
         )}
       </div>

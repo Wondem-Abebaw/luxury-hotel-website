@@ -3,8 +3,8 @@ import { Menu } from '@/components/menu'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Menu | Luxe Haven',
-  description: 'Explore our freshly prepared dishes and drinks at Luxe Haven.',
+  title: 'Menu | Green Pearl',
+  description: 'Explore our freshly prepared dishes and drinks at Green Pearl.',
 }
 
 export default function MenusPage() {

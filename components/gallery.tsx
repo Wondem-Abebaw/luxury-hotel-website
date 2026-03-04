@@ -55,7 +55,7 @@ export function Gallery() {
             Gallery
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explore the beauty and elegance of Luxe Haven's luxury rooms, spa
+            Explore the beauty and elegance of Green Pearl's luxury rooms, spa
             facilities, fine dining, and stunning oceanfront views
           </p>
         </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
           <div>
             <h3 className="text-2xl font-serif font-bold mb-4">
               <a href="/" className="hover:text-primary transition-colors">
-                Luxe Haven
+              Green Pearl Hotel
               </a>
             </h3>
             <p className="text-secondary-foreground/80 text-sm leading-relaxed">
@@ -49,9 +50,9 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-secondary-foreground/80">
-                  123 Luxury Lane, Coastal City, CC 12345
-                </span>
+                <Link href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x164b8fec8b646bcd:0x85e0491a0229c00c?sa=X&ved=1t:8290&ictx=111"  target="_blank" className="text-secondary-foreground/80">
+                 Adisu Gebeya, Addis Ababa, Ethiopia
+                </Link>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary flex-shrink-0" />
@@ -59,16 +60,16 @@ export function Footer() {
                   href="tel:+1234567890"
                   className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
-                  +1 (234) 567-8900
+                  +251 96 534 5840
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary flex-shrink-0" />
                 <a
-                  href="mailto:info@luxehaven.com"
+                  href="mailto:info@greenpearlhotel.com"
                   className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
-                  info@luxehaven.com
+                  info@greenpearlhotel.com
                 </a>
               </li>
             </ul>
@@ -83,17 +84,17 @@ export function Footer() {
               {[
                 {
                   icon: Facebook,
-                  href: 'https://www.facebook.com/luxehaven',
+                  href: 'https://www.facebook.com/greenpearlhotel',
                   label: 'Visit our Facebook page',
                 },
                 {
                   icon: Instagram,
-                  href: 'https://www.instagram.com/luxehaven',
+                  href: 'https://www.instagram.com/greenpearlhotel',
                   label: 'Visit our Instagram profile',
                 },
                 {
                   icon: Twitter,
-                  href: 'https://www.twitter.com/luxehaven',
+                  href: 'https://www.twitter.com/greenpearlhotel',
                   label: 'Visit our Twitter profile',
                 },
               ].map((social) => {
@@ -121,7 +122,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between text-sm text-secondary-foreground/70">
           <p>
-            &copy; {new Date().getFullYear()} Luxe Haven. All rights reserved.
+            &copy; {new Date().getFullYear()} Green Pearl. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-primary transition-colors">

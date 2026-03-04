@@ -3,7 +3,7 @@ Allow: /
 Disallow: /admin
 Disallow: /.next
 
-Sitemap: https://luxehaven.com/sitemap.xml
+Sitemap: https://greenpearlhotel.com/sitemap.xml
 
 # Specific rules for Google
 User-agent: Googlebot

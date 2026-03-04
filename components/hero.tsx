@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState, useCallback } from 'react'
 
 const slides = [
@@ -231,7 +232,7 @@ export function Hero() {
 
       <section
         className="relative h-screen flex items-center justify-center overflow-hidden"
-        aria-label="Luxe Haven Hotel Hero"
+        aria-label="Green Pearl Hotel Hero"
         style={{ background: '#0a0a0a' }}
       >
         {/* Slides */}
@@ -334,10 +335,11 @@ export function Hero() {
             }}
           >
             <p
-              className="hero-caption text-white/75 mb-10 max-w-md"
+              className="text-white/75 mb-10 max-w-md text-lg"
               style={{ transition: 'opacity 0.5s ease', opacity: transitioning ? 0.4 : 1 }}
             >
-              {slides[current].caption}
+              {/* {slides[current].caption} */}
+              Under Entoto Mountain
             </p>
           </div>
 
@@ -349,8 +351,12 @@ export function Hero() {
               transitionDelay: '0.7s',
             }}
           >
-            <button className="hero-btn-primary">Book Your Stay</button>
-            <button className="hero-btn-secondary">Explore</button>
+            <Link href="#booking">
+              <button className="hero-btn-primary">Book Your Stay</button>
+            </Link>
+            <Link href="#rooms">
+              <button className="hero-btn-secondary">Explore</button>
+            </Link>
           </div>
         </div>
 

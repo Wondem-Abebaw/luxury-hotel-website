@@ -2,13 +2,13 @@ export function JsonLd() {
   const hotelSchema = {
     "@context": "https://schema.org",
     "@type": "Hotel",
-    "@id": "https://costriahotel.com",
-    name: "Costria Hotel",
+    "@id": "https://greenpearlhotel.com",
+    name: "Green Pearl Hotel",
     description:
-      "Costria Hotel is one of the top hotels in Addis Ababa, offering premium accommodations, world-class amenities, and exceptional service for an unforgettable stay.",
-    url: "https://costriahotel.com",
+      "Green Pearl Hotel is one of the top hotels in Addis Ababa, offering premium accommodations, world-class amenities, and exceptional service for an unforgettable stay.",
+    url: "https://greenpearlhotel.com",
     telephone: "+251-11-123-4567",
-    email: "info@costriahotel.com",
+    email: "info@greenpearlhotel.com",
     image:
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
     priceRange: "$$$$",
@@ -43,7 +43,7 @@ export function JsonLd() {
         "@type": "Room",
         name: "Deluxe Suite",
         description: "Spacious suite with premium furnishings and city views",
-        url: "https://costriahotel.com/rooms/deluxe-suite",
+        url: "https://greenpearlhotel.com/rooms/deluxe-suite",
         offers: {
           "@type": "PriceSpecification",
           priceCurrency: "ETB",
@@ -55,7 +55,7 @@ export function JsonLd() {
         "@type": "Room",
         name: "City View Room",
         description: "Modern accommodation with panoramic Addis Ababa views",
-        url: "https://costriahotel.com/rooms/city-view-room",
+        url: "https://greenpearlhotel.com/rooms/city-view-room",
         offers: {
           "@type": "PriceSpecification",
           priceCurrency: "ETB",
@@ -68,7 +68,7 @@ export function JsonLd() {
         name: "Presidential Suite",
         description:
           "Ultimate luxury with private spa and exceptional amenities",
-        url: "https://costriahotel.com/rooms/presidential-suite",
+        url: "https://greenpearlhotel.com/rooms/presidential-suite",
         offers: {
           "@type": "PriceSpecification",
           priceCurrency: "ETB",
@@ -78,30 +78,30 @@ export function JsonLd() {
       },
     ],
     sameAs: [
-      "https://www.facebook.com/costriahotel",
-      "https://www.instagram.com/costriahotel",
-      "https://www.twitter.com/costriahotel",
+      "https://www.facebook.com/greenpearlhotel",
+      "https://www.instagram.com/greenpearlhotel",
+      "https://www.twitter.com/greenpearlhotel",
     ],
   };
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Costria Hotel",
-    url: "https://costriahotel.com",
-    logo: "https://costriahotel.com/logo.png",
+    name: "Green Pearl Hotel",
+    url: "https://greenpearlhotel.com",
+    logo: "https://greenpearlhotel.com/logo.png",
     description:
       "Boutique luxury hotel in Addis Ababa with premium accommodations and world-class amenities",
     sameAs: [
-      "https://www.facebook.com/costriahotel",
-      "https://www.instagram.com/costriahotel",
-      "https://www.twitter.com/costriahotel",
+      "https://www.facebook.com/greenpearlhotel",
+      "https://www.instagram.com/greenpearlhotel",
+      "https://www.twitter.com/greenpearlhotel",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
       telephone: "+251-11-123-4567",
-      email: "info@costriahotel.com",
+      email: "info@greenpearlhotel.com",
     },
   };
 
