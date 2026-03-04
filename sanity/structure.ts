@@ -1,12 +1,11 @@
-import { Calendar } from 'lucide-react'
-import type {StructureResolver} from 'sanity/structure'
+import { Calendar, BedDouble, UtensilsCrossed, LayoutList } from 'lucide-react'
+import type { StructureResolver } from 'sanity/structure'
 
-// https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure: StructureResolver = (S) =>
   S.list()
     .title('Content')
     .items([
-      // Custom list items
+      // Bookings
       S.listItem()
         .title('Bookings')
         .icon(Calendar)
@@ -17,6 +16,33 @@ export const structure: StructureResolver = (S) =>
             .defaultOrdering([{ field: 'submittedAt', direction: 'desc' }])
         ),
 
-      // Default document types
-      ...S.documentTypeListItems(),
+      // Rooms
+      S.listItem()
+        .title('Rooms')
+        .icon(BedDouble)
+        .child(
+          S.documentList()
+            .title('All Rooms')
+            .filter('_type == "room"')
+        ),
+
+      // Menu Items
+      S.listItem()
+        .title('Menu Items')
+        .icon(UtensilsCrossed)
+        .child(
+          S.documentList()
+            .title('All Menu Items')
+            .filter('_type == "menuItem"')
+        ),
+
+      // Menu Categories
+      S.listItem()
+        .title('Menu Categories')
+        .icon(LayoutList)
+        .child(
+          S.documentList()
+            .title('All Menu Categories')
+            .filter('_type == "menuCategory"')
+        ),
     ])
