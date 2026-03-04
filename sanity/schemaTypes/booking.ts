@@ -72,16 +72,27 @@ export const bookingSchema = defineType({
     }),
   ],
   preview: {
-    select: {
-      title: 'guestName',
-      subtitle: 'status',
-      checkIn: 'checkIn',
-    },
-    prepare({ title, subtitle, checkIn }) {
-      return {
-        title: title,
-        subtitle: `${subtitle?.toUpperCase()} — Check-in: ${checkIn}`,
-      }
-    },
+  select: {
+    title: 'guestName',
+    subtitle: 'status',
+    checkIn: 'checkIn',
+    checkOut: 'checkOut',
   },
+  prepare({ title, subtitle, checkIn, checkOut }) {
+    const formatDate = (dateStr: string) => {
+      if (!dateStr) return ''
+      const date = new Date(dateStr + 'T00:00:00') // prevent timezone shift
+      return date.toLocaleDateString('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+      })
+    }
+
+    return {
+      title: title,
+      subtitle: `${subtitle?.toUpperCase()} · ${formatDate(checkIn)} → ${formatDate(checkOut)}`,
+    }
+  },
+},
 })

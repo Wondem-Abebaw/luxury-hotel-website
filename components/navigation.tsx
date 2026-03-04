@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 export function Navigation() {
@@ -12,7 +13,6 @@ export function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
-
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -34,11 +34,25 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <div className="text-2xl font-serif font-bold text-foreground">
-              Luxe Haven
+          <Link href="/" className="flex-shrink-0 flex items-center gap-3">
+            <div className={`relative w-12 h-12 rounded-full overflow-hidden ring-1 transition-all duration-300 ${
+              isScrolled ? 'ring-border' : 'ring-white/30'
+            }`}>
+              <Image
+                src="/logo.jpg"
+                alt="Luxe Haven logo"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
+            <span className={`text-xl font-serif font-bold transition-colors duration-300 ${
+              isScrolled ? 'text-primary' : 'text-primary'
+            }`}>
+              Luxe Haven
+            </span>
           </Link>
 
           {/* Desktop Menu */}
@@ -48,7 +62,11 @@ export function Navigation() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider"
+                  className={`transition-colors duration-300 text-sm uppercase tracking-wider ${
+                    isScrolled
+                      ? 'text-foreground hover:text-primary'
+                      : 'text-white/80 hover:text-white'
+                  }`}
                 >
                   {link.name}
                 </a>
@@ -58,16 +76,22 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="px-6 py-2 bg-primary text-primary-foreground text-sm uppercase tracking-wider rounded-sm hover:opacity-90 transition-opacity">
+            <a href="#booking" className={`px-6 py-2 text-sm uppercase tracking-wider rounded-sm transition-all duration-300 inline-block ${
+              isScrolled
+                ? 'bg-primary text-primary-foreground hover:opacity-90'
+                : 'bg-white/15 text-white border border-white/50 hover:bg-white/25 backdrop-blur-sm'
+            }`}>
               Book Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center text-foreground hover:text-primary transition-colors"
+              className={`inline-flex items-center justify-center transition-colors duration-300 ${
+                isScrolled ? 'text-foreground hover:text-primary' : 'text-white'
+              }`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -87,9 +111,9 @@ export function Navigation() {
                 {link.name}
               </a>
             ))}
-            <button className="w-full mt-4 px-6 py-2 bg-primary text-primary-foreground text-sm uppercase tracking-wider rounded-sm hover:opacity-90 transition-opacity">
+            <a href="#booking" onClick={() => setIsOpen(false)} className="block w-full mt-4 px-6 py-2 bg-primary text-primary-foreground text-sm uppercase tracking-wider rounded-sm hover:opacity-90 transition-opacity text-center">
               Book Now
-            </button>
+            </a>
           </div>
         )}
       </div>

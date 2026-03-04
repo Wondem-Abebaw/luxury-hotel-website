@@ -12,27 +12,27 @@ const GALLERY_IMAGES = [
   {
     id: 2,
     title: "Spa & Wellness",
-    url: "https://images.unsplash.com/photo-1600881333195-6ce9f4d2b9b1?w=800&q=80",
+    url: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
   },
   {
     id: 3,
-    title: "Fine Dining",
-    url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&q=80",
+    title: "Restaurant & Bar",
+    url: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
   },
   {
     id: 4,
-    title: "Oceanfront View",
-    url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    title: "Accommodation",
+    url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80",
   },
   {
     id: 5,
-    title: "Swimming Pool",
-    url: "https://images.unsplash.com/photo-1576091160550-112173f7f869?w=800&q=80",
+    title: "Meeting Rooms",
+    url: "https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=800&q=80",
   },
   {
     id: 6,
-    title: "Exterior Architecture",
-    url: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=80",
+    title: "Gym & Fitness",
+    url: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
   },
 ];
 
