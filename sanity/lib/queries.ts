@@ -86,10 +86,6 @@ export async function getMenuGrouped(): Promise<MenuCategory[]> {
       }
     }`,
     {},
-    {
-      next: {
-        revalidate: 3600,
-      }
-    }
+ { next: { tags: ['menu'] } }
   )
 }
