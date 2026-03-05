@@ -33,7 +33,7 @@ export default function Home() {
         <Hero />
         <RoomsGrid />
         <Amenities />
-        <Menu />
+        {/* <Menu /> */}
         <Gallery />
         <BookingForm />
         <Footer />

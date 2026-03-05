@@ -22,7 +22,7 @@ export function QRCard({ hotelName, menuUrl, tagline }: Props) {
       {/* Print Button - hidden when printing */}
       <button
         onClick={handlePrint}
-        className="no-print flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-8 py-3 rounded-full transition-colors"
+        className="no-print flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-full transition-colors"
       >
         🖨️ Print / Save as PDF
       </button>
@@ -33,10 +33,10 @@ export function QRCard({ hotelName, menuUrl, tagline }: Props) {
         className="qr-card bg-white rounded-3xl shadow-2xl overflow-hidden w-[380px]"
       >
         {/* Top Banner */}
-        <div className="bg-amber-600 px-8 py-6 text-center">
+        <div className="bg-green-600 px-8 py-6 text-center">
           <h1 className="text-white text-3xl font-bold tracking-wide">{hotelName}</h1>
           {tagline && (
-            <p className="text-amber-100 text-sm mt-1">{tagline}</p>
+            <p className="text-green-100 text-sm mt-1">{tagline}</p>
           )}
         </div>
 
@@ -49,7 +49,7 @@ export function QRCard({ hotelName, menuUrl, tagline }: Props) {
           </p>
 
           {/* QR Code */}
-          <div className="border-4 border-amber-500 rounded-2xl p-4 bg-white">
+          <div className="border-4 border-green-500 rounded-2xl p-4 bg-white">
             <QRCodeSVG
               value={menuUrl}
               size={200}
@@ -74,7 +74,7 @@ export function QRCard({ hotelName, menuUrl, tagline }: Props) {
               { step: '3', text: 'Tap the link that appears' },
             ].map(({ step, text }) => (
               <div key={step} className="flex items-center gap-3">
-                <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-700 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <span className="w-6 h-6 rounded-full bg-green-100 text-green-700 text-xs font-bold flex items-center justify-center flex-shrink-0">
                   {step}
                 </span>
                 <span className="text-gray-600 text-sm">{text}</span>

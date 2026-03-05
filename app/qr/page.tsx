@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 }
 
 
-const HOTEL_NAME = 'Green Pearl'
-const HOTEL_TAGLINE = 'Boutique Luxury Hotel'
-const MENU_URL = 'https://luxury-hotel-website-five.vercel.app/menus'
+const HOTEL_NAME = 'Green Pearl Hotel'
+const HOTEL_TAGLINE = 'Under Entoto Mountain'
+const MENU_URL = 'https://greenpearlhotel.vercel.app/menus'
 
 export default function QRPage() {
   return (

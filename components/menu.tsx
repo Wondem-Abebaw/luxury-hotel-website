@@ -31,7 +31,7 @@ export async function Menu() {
             <div key={category.id}>
 
               {/* Category Header */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-amber-500 inline-block">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-green-500 inline-block">
                 {category.name}
               </h3>
 

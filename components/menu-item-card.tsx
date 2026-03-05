@@ -26,7 +26,7 @@ export function MenuItemCard({ name, price, description, image }: Props) {
       <div className="flex-1 min-w-0">
         <div className="flex justify-between items-start gap-2">
           <h4 className="font-semibold text-gray-900 text-sm">{name}</h4>
-          <span className="text-amber-600 font-bold text-sm whitespace-nowrap">
+          <span className="text-green-600 font-bold text-sm whitespace-nowrap">
             ${price.toFixed(2)}
           </span>
         </div>
