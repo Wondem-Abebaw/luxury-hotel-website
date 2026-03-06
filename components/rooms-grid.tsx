@@ -45,18 +45,18 @@ export async function RoomsGrid() {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold">{room.name}</h3>
-                  <span className="text-lg font-bold text-amber-600">
+                  <span className="text-lg font-bold text-green-600">
                     ${room.price}
                     <span className="text-sm font-normal">/night</span>
                   </span>
                 </div>
                 <p className="text-gray-600 mb-4">{room.description}</p>
-                <Link
-                  href={`/rooms/${room.slug}`}
-                  className="inline-block bg-amber-600 text-white px-6 py-2 rounded-full hover:bg-amber-700 transition-colors"
+                <div
+                  // href={`/rooms/${room.slug}`}
+                  className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors"
                 >
                   View Details →
-                </Link>
+                </div>
               </div>
             </div>
           ))}

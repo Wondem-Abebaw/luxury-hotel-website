@@ -248,12 +248,10 @@ export function BookingForm() {
                 className="w-full px-4 py-2 bg-background text-foreground rounded-sm border border-border focus:outline-none focus:ring-2 focus:ring-primary appearance-none"
               >
                 <option value="all">Any Room</option>
-                <option value="deluxe">Deluxe Suite</option>
-                <option value="oceanview">Oceanview Room</option>
-                <option value="presidential">Presidential Suite</option>
-                <option value="garden">Garden Room</option>
-                <option value="penthouse">Penthouse</option>
+                <option value="standard">Delux Standard Room</option>
                 <option value="classic">Classic Room</option>
+                <option value="twin">Delux Twin Bed</option>
+                <option value="presidential">Presidential Suite</option>
               </select>
             </div>
           </div>
